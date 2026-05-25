@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import FoodCard from "../components/FoodCard";
 
 function Dashboard() {
+  
 
   const foods = [
     {
