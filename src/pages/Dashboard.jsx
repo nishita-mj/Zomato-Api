@@ -1,6 +1,6 @@
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
-import FoodCard from "../components/FoodCard";
+import Sidebar from "../Components/Sidebar";
+import Navbar from "../Components/Navbar";
+import FoodCard from "../Components/FoodCard";
 
 function Dashboard() {
   

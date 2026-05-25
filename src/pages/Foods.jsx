@@ -3,10 +3,10 @@ import {
   useState,
 } from "react";
 
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
+import Sidebar from "../Components/Sidebar";
+import Navbar from "../Components/Navbar";
 
-import api from "../api/api";
+import api from "../Api/api";
 
 function Foods() {
 

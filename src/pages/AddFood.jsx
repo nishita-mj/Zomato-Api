@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
-import api from "../api/api";
+import Sidebar from "../Components/Sidebar";
+import Navbar from "../Components/Navbar";
+import api from "../Api/api";
 
 function AddFood() {
   const [loading, setLoading] = useState(false);
@@ -39,7 +39,11 @@ function AddFood() {
       formData.append("description", data.description);
       formData.append("image", image);
 
-      await api.post("/foods", formData);
+      await api.post("/foods", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
 
       alert("Food Added ✅");
 
@@ -71,9 +75,20 @@ function AddFood() {
         <div className="add-food-container">
           <form className="add-food-form" onSubmit={handleSubmit}>
             <h2>Add Food 🍔</h2>
+            
+            <input
+              name="title"
+              placeholder="Food Title"
+              value={data.title}
+              onChange={handleChange}
+            />
 
-            <input name="title" value={data.title} onChange={handleChange} />
-            <input name="price" value={data.price} onChange={handleChange} />
+            <input
+              name="price"
+              placeholder="Price"
+              value={data.price}
+              onChange={handleChange}
+            />
 
             <select name="category" value={data.category} onChange={handleChange}>
               <option value="">Select Category</option>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
+import Sidebar from "../Components/Sidebar";
+import Navbar from "../Components/Navbar";
 
 function Orders() {
 
